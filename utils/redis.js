@@ -13,6 +13,7 @@ class RedisClient {
   isAlive() {
     try {
       const result = this.client.ping();
+      // console.log('PING result:', result);
       return result === 'PONG';
     } catch (err) {
       console.error(err);
